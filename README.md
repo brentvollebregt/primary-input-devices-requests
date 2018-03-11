@@ -1,5 +1,5 @@
 <h1 align="center">Primary Input Devices Requests</h1>
-<p align="center">A server that controls the mouse and keyboard based of a request.</p>
+<p align="center">A server that controls the mouse and keyboard based off a request.</p>
 
 ## Getting Started
 

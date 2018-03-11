@@ -7,7 +7,6 @@ import random
 
 import control
 
-# Arguments
 parser = argparse.ArgumentParser(description='A simple server that allows you to control the mouse and keyboard.')
 parser.add_argument('-key', action="store", type=str, default='')
 parser.add_argument('-ip', action="store", type=str, default=socket.gethostbyname(socket.gethostname()))
