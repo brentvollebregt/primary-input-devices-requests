@@ -86,7 +86,7 @@ def mouse_move_route():
     if not check_token(request.json['token']):
         return jsonify({'success' : False, 'reason' : 'Invalid Token'})
 
-    action = control.mouse_move(request.json['x'], request.json['y'])
+    action = control.mouse_move(int(request.json['x']), int(request.json['y']))
     return jsonify({'success': action})
 
 @app.route("/mouse/click", methods=['POST'])
@@ -94,7 +94,7 @@ def mouse_click_route():
     if not check_token(request.json['token']):
         return jsonify({'success' : False, 'reason' : 'Invalid Token'})
 
-    action = control.mouse_click(request.json['button'], request.json['amount'])
+    action = control.mouse_click(request.json['button'], int(request.json['amount']))
     return jsonify({'success': action})
 
 @app.route("/mouse/press", methods=['POST'])
@@ -118,7 +118,7 @@ def mouse_scroll_route():
     if not check_token(request.json['token']):
         return jsonify({'success' : False, 'reason' : 'Invalid Token'})
 
-    action = control.mouse_scroll(request.json['dx'], request.json['dy'])
+    action = control.mouse_scroll(int(request.json['dx']), int(request.json['dy']))
     return jsonify({'success': action})
 
 app.run(args.ip, args.port)
