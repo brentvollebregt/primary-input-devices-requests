@@ -26,7 +26,7 @@ def info_route():
         "os" : platform.system(),
         "release" : platform.release(),
         "user": platform.node(),
-        "security" : args.key != ''
+        "key_required" : args.key != ''
     })
 
 @app.route("/get_token", methods=['POST'])
