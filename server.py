@@ -70,7 +70,17 @@ def keyboard_release_route():
     action = control.keyboard_release(request.json['key'])
     return jsonify({'success': action})
 
-# TODO Mouse Position
+@app.route("/mouse/position", methods=['GET', 'POST'])
+def mouse_position_route():
+    if not check_token(request.json['token']):
+        return jsonify({'success' : False, 'reason' : 'Invalid Token'})
+
+    if request.method == 'GET':
+        action = control.mouse_position()
+        return jsonify({'success': True, 'position' : action})
+    else:
+        action = control.mouse_position( (int(request.json['x']), int(request.json['y'])) )
+        return jsonify({'success': action})
 
 @app.route("/mouse/move", methods=['POST'])
 def mouse_move_route():

@@ -73,6 +73,7 @@ def mouse_position(position_vector=None):
     if position_vector is None:
         return mouse_controller.position
     else:
+        print (position_vector)
         mouse_controller.position = position_vector
         return True
 
