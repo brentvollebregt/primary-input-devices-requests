@@ -63,4 +63,4 @@ Run ```server.py```. The server will start up in the background with the local i
 | /mouse/release | POST | token, button | Release a mouse button |
 | /mouse/scroll | POST | token, dx, dy | Scroll the mouse horizontally and or vertically |
 
-*Special keys and mouse buttons can be found at the top of [control.py](https://github.com/brentvollebregt/primary-input-devices-requests/blob/master/control.py#L11-42)*
+*Special keys and mouse buttons can be found at the top of [control.py](https://github.com/brentvollebregt/primary-input-devices-requests/blob/master/control.py#L11-52)*
